@@ -1,0 +1,95 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    /* box-sizing: border-box; */
+}
+body{
+    background:linear-gradient(#200016,#10001f);
+    height: 100vh;
+    font-family: system-ui;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+header{
+    /* لجعل قسم السيكسن يطلع لفوق من بداية الصفحة اعمل بوزيشن للهيدر فيسكت واعطيع عرض 95 بالمية
+     */
+     position: fixed;
+     width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    z-index: 100;
+}
+header .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+header ul li{
+    margin-right: 30px;
+}
+header ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+header ul li a:hover, .active{
+    background-color: #fff;
+    color: #200016;
+}
+/* عندما يكون لدي أب وفي داخله عناصر أريد ضبط أبعادها مع الأب أعطي للاب بوزيشن ريليتف والابناء ابسلوت */
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* لاضافة مساحة تحت عنصر المين وذلك لدمج الالوان نستخدم افتر */
+.main::after{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    content: '';
+    background:linear-gradient(to top,#200016,transparent);/* to top تجعل تدرج الالوان باتجاه الاعلى واللون الاول يكون تحت*/
+    color: transparent;
+}
+.main img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    /* object-fit: cover; */
+}
+#moon{
+    /* لاضافة تأثير على القمر  */
+    mix-blend-mode: screen;
+    transform: translateY(60px);
+
+}
+.novil{
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: translateY(-140px);
+}
+.content{
+    padding: 30px;
+    color: #fff;
+}
+.content h2{
+    font-size: 30px;
+    margin: 20px;
+}
+.content p{
+    margin:20px ;
+}
